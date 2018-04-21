@@ -9,3 +9,14 @@ chrome.runtime.onInstalled.addListener(function() {
     console.log("The color is green.");
   });
 });
+
+var timeSet = 1000;
+
+
+
+var userTime = setTimeout(alertUser, timeSet);
+
+
+function alertUser() {
+	alert("Hello");
+}
