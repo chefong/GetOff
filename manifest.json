@@ -1,6 +1,13 @@
 {
-  "name": "Getting Started Example",
+  "name": "Tab Timer",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "A extension that records the amount of time spent browsing a website. This extension will also stop the user from accessing the website if it exceeds allotted time ",
+  "permissions": [
+          "storage"
+        ],
+ "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
   "manifest_version": 2
 }
