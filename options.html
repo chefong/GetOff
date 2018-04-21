@@ -15,12 +15,24 @@
   </head>
 
   <body>
-    <label>
-      Set Default Timer:
-      <input type = "datetime-local" id = "defaultTime">
-    </label>
+    <form>
+      Set Default Timer in the form hh:mm :
+      <input type = "text" id = "defaultTimer">
+    </form>
+    <form>
+        Preferred Timer Mode:
+        <input type = "radio" id = "timerMode1"
+        name = "timerMode" value = "Per Browser">
+        <label for="timerMode1">Per Browser</label>
+        <input type = "radio" id = "timerMode2"
+        name = "timerMode" value = "Per Tab">
+        <label for="timerMode2">Per Tab</label>
+
+    </form>
     <div id="status"></div>
       <button id="save">Save Timer</button>
+
+
   </body>
   <script src="options.js"></script>
 </html>

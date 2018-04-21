@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 function saveDefaultTimer() {
-  var defualtTime = document.getElementById('defualtTime').value;
+  var defualtTime = document.getElementById('defualtTimer').value;
   chrome.storage.sync.set({
     savedDefualtTime: defualtTime
   }, function() {
