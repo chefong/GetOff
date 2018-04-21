@@ -1,11 +1,20 @@
 {
-  "name": "Getting Started Example",
+  "name": "WebTimer",
   "version": "1.0",
-  "description": "Build an Extension!",
+  "description": "Shows how much time a user has spent on a website",
   "manifest_version": 2,
   "background": {
     "scripts": [
        "background.js"
     ]
+	},
+  "permissions": [
+  	"input",
+  	"http://*/*",
+  	"https://*/*"
+  ],
+  "options_ui": {
+  	"page": "options.html",
+  	"open_in_tab": false
   }
 }
