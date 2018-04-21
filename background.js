@@ -10,9 +10,9 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
-while(true) {
-	var userTime = setTimeout(alertUser, 1000);
-}
+
+	var userTime = setTimeout(alertUser, 5000);
+
 
 function alertUser() {
 	alert("Hello");
