@@ -4,7 +4,7 @@
   "description": "Shows how much time a user has spent on a website",
   "manifest_version": 2,
   "permissions": [
-  	"input"
+  	"input",
   	"http://*/*",
   	"https://*/*"
   ],
