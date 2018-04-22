@@ -11,9 +11,9 @@
   		}
   	],
   	"icons": { 
-  		"16": "WebTimerIcon16.png",
-    	"48": "WebTimerIcon48.png",
-    	"128": "WebTimerIcon128.png" 
+  		"16": "imgs/WebTimerIcon16.png",
+    	"48": "imgs/WebTimerIcon48.png",
+    	"128": "imgs/WebTimerIcon128.png" 
 	},
   	"permissions": [
 	    "tabs",
