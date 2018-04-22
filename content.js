@@ -64,25 +64,25 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 		  confirmButtonText: "I don't need a break!"
 		}).then((result) => {
 		  	
-
-		    // Download the Node helper library from twilio.com/docs/node/install
-			// These consts are your accountSid and authToken from https://www.twilio.com/console
-			const accountSid = 'ACcb57f1e5c22c022077cf6418524459ed';
-			const authToken = '7554d223eaa26791ff32778b37147e7d';
-			const client = Twilio(accountSid, authToken, {
-				env:"development"
-			});
+			window.location.replace("http://m.memegen.com/gy6mmd.jpg");
+		 //    // Download the Node helper library from twilio.com/docs/node/install
+			// // These consts are your accountSid and authToken from https://www.twilio.com/console
+			// const accountSid = 'ACcb57f1e5c22c022077cf6418524459ed';
+			// const authToken = '7554d223eaa26791ff32778b37147e7d';
+			// const client = Twilio(accountSid, authToken, {
+			// 	env:"development"
+			// });
  
-			client.messages
-			  .create({
-			    body: "It has detected that your computer has been on " + window.location.href + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minutes(s)",
-			    to: '+3107020225',
-			    from: '+4245436366',
-			  })
-			  .then(message => process.stdout.write(message.sid));
+			// client.messages
+			//   .create({
+			//     body: "It has detected that your computer has been on " + window.location.href + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minutes(s)",
+			//     to: '+3107020225',
+			//     from: '+4245436366',
+			//   })
+			//   .then(message => process.stdout.write(message.sid));
 			
 
-		    window.location.replace("http://m.memegen.com/gy6mmd.jpg");
+		    
 
 
 			
