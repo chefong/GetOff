@@ -9,8 +9,9 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 	userMinutes = result.savedDefaultMinutes;
 
 	//alert(userHours + " hours and " + userMinutes + " minutes");
-
-	userTimer = setInterval(alertUserCustom(userHours, userMinutes), convertTime(userHours, userMinutes));
+	let time = convertTime(userHours, userMinutes);
+	// alert(time);
+	userTimer = setTimeout(alertUserCustom(userHours, userMinutes), time);
 })
 
 function alertUserDefault() {
@@ -24,5 +25,6 @@ function alertUserCustom(userHours, userMinutes) {
 }
 
 function convertTime(hours, minutes) {
-	return ((hours * 60) + minutes) * 60000;
+	let total = ((hours * 60) + minutes) * 60000;
+	return total;
 }
