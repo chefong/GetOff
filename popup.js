@@ -6,6 +6,8 @@ document.getElementById('save').addEventListener('click', saveDefaultTimer);
 function saveDefaultTimer() {
   var defaultHours = document.getElementById('Hours').value;
   var defaultMinutes = document.getElementById('Minutes').value;
+  console.log(defaultMinutes)
+  console.log(defaultHours)
   chrome.storage.sync.set({
     savedDefaultHours: defaultHours,
     savedDefaultMinutes: defaultMinutes
