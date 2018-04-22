@@ -16,10 +16,12 @@
 
   <body>
     <form>
-      Set Default Timer (hh:mm):
-      <input type = "text" id = "defaultTimer">
-    </form>
-    <form>
+      Set Default Timer: <br />
+      hours:
+      <input type = "number" id = "Hours" min = "0"><br />
+      minutes:
+      <input type = "number" id = "Minutes" min = "0" max = "59"><br />
+
         Preferred Timer Mode:
         <input type = "radio" id = "timerMode1"
         name = "timerMode" value = "Per Browser">
@@ -27,7 +29,6 @@
         <input type = "radio" id = "timerMode2"
         name = "timerMode" value = "Per Tab">
         <label for="timerMode2">Per Tab</label>
-
     </form>
     <div id="status"></div>
       <button id="save">Save Settings</button>
