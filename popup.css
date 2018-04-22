@@ -1,20 +1,21 @@
-#logo {
-	width: 80%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
-    margin-top: 5%;
+#save {
+	width: 20%;
+	height: 200%;
+	margin-top: 2%;
 }
 
-#save {
-	width: 50%;
-	height: 200%;
+#logo {
+	height: 50%;
+	width: 100%;
 }
 
 body {
-	width: 400px;
-	height: 300px;
-	font-family: "Tajawal", sans-serif;
-	font-size: 125%;
+	font-family: 'Tajawal', sans-serif;
+	font-size: 115%;
+	height: 100px;
+	width: 300px;
+}
+
+#Hours {
+	width: 35px;
 }
