@@ -69,11 +69,13 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 			// These consts are your accountSid and authToken from https://www.twilio.com/console
 			const accountSid = 'ACcb57f1e5c22c022077cf6418524459ed';
 			const authToken = '7554d223eaa26791ff32778b37147e7d';
-			const client = require('twilio')(accountSid, authToken);
-
+			const client = Twilio(accountSid, authToken, {
+				env:"development"
+			});
+ 
 			client.messages
 			  .create({
-			    body: "Welcome to the twilio zone!",
+			    body: "It has detected that your computer has been on " + window.location.href + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minutes(s)",
 			    to: '+3107020225',
 			    from: '+4245436366',
 			  })
