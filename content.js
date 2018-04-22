@@ -1,16 +1,30 @@
 console.log("I'm running");
 
-var userHours;
-var userMinutes;
+var userHours = 0;
+var userMinutes = 0;
 var userTimer;
 
 chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(result) {
-	userHours = result.savedDefaultHours;
-	userMinutes = result.savedDefaultMinutes;
+	if (result.savedDefaultHours == 0 && result.savedDefaultMinutes == 0){
+		userHours = 0;
+		userMinutes = .1;
+	}
+	if (result.savedDefaultHours == ""){
+		userHours = 0;
+	}
+	else{
+		userHours = result.savedDefaultHours;
+	}
+	if (result.savedDefaultMinutes == ""){
+		userMinutes = 0;
+	}
+	else{
+		userMinutes = result.savedDefaultMinutes;
+	}
 
 	//alert(userHours + " hours and " + userMinutes + " minutes");
 
-	userTimer = setInterval(alertUserCustom(userHours, userMinutes), convertTime(userHours, userMinutes));
+	userTimer = setTimeout(alertUserCustom(userHours, userMinutes), convertTime(userHours, userMinutes));
 })
 
 function alertUserDefault() {

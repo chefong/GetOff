@@ -36,7 +36,7 @@ window.onload = function() {
 		console.log(defaultMinutes);
 
 		chrome.storage.local.set({'savedDefaultHours': defaultHours, 'savedDefaultMinutes': defaultMinutes}, function() {
-		  	alert("Success!");
+		  	//alert("Success!");
 		});
 
 		chrome.storage.local.get('savedDefaultHours', function(result) {
