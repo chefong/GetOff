@@ -13,6 +13,8 @@ chrome.runtime.onInstalled.addListener(function() {
 // var userTime = setInterval(alertUser, 5000);
 // var url;
 
+// var userTime = setTimeout(alertUser, 5000);
+
 // chrome.tabs.query({'active': true, 'currentWindow': true}, function (tabs) {
 //     url = tabs[0].url;
 // });
