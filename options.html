@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head><title>My Test Extension Options</title></head>
-<body>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      button {
+        height: 50px;
+        width: 80px;
+        outline: none;
+        margin: 10px;
+      }
+    </style>
+    <title>
+      Settings
+    </title>
+  </head>
 
-Favorite color:
-<select id="color">
- <option value="red">red</option>
- <option value="green">green</option>
- <option value="blue">blue</option>
- <option value="yellow">yellow</option>
-</select>
+  <body>
+    <form>
+      Set Default Timer: <br />
+      Hours:
+      <input type = "number" id = "Hours" min = "0"><br />
+      Minutes:
+      <input type = "number" id = "Minutes" min = "0" max = "59"><br />
 
-<label>
-  <input type="checkbox" id="like">
-  I like colors.
-</label>
 
-<div id="status"></div>
-<button id="save">Save</button>
 
-<script src="options.js"></script>
-</body>
+        Preferred Timer Mode:
+        <input type = "radio" id = "timerMode1"
+        name = "timerMode" value = "Per Browser">
+        <label for="timerMode1">Per Browser</label>
+        <input type = "radio" id = "timerMode2"
+        name = "timerMode" value = "Per Tab">
+        <label for="timerMode2">Per Tab</label>
+    </form>
+    <div id="status"></div>
+      <button id="save" onclick="saveDefaultTimer()">Save Settings</button>
+      <p id="demo"></p>
+
+
+  </body>
+  <script src="options.js"></script>
 </html>
