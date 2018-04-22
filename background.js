@@ -60,7 +60,12 @@ var timeSet = 1000;
 
 var userTime = setTimeout(alertUser, timeSet);
 
+function dialogbox() {
+    alert( "#dialog" ).dialog();
+ }
 
-function alertUser() {
-	alert("Hello");
-}
+
+// function alertUser() {
+// 	alert("Hello");
+// }
+
