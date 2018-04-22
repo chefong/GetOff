@@ -4,7 +4,7 @@ let userTimer = setInterval(alertUser, 5000);
 var siteURL;
 
 chrome.tabs.query({'active': true, 'currentWindow': true}, function(tabs) {
-    siteURL = window.location;
+    siteURL = location;
 });
 
 function alertUser() {
