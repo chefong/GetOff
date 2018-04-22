@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(function() {
     console.log("The color is green.");
   });
 });
-
+swal('any message')
 // var userTime = setInterval(alertUser, 5000);
 // var url;
 
