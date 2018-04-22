@@ -63,9 +63,28 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 		  confirmButtonColor: '#3085d6',
 		  confirmButtonText: "I don't need a break!"
 		}).then((result) => {
-		  
+		  	
+
+		    // Download the Node helper library from twilio.com/docs/node/install
+			// These consts are your accountSid and authToken from https://www.twilio.com/console
+			const accountSid = 'ACcb57f1e5c22c022077cf6418524459ed';
+			const authToken = '7554d223eaa26791ff32778b37147e7d';
+			const client = require('twilio')(accountSid, authToken);
+
+			client.messages
+			  .create({
+			    body: "Welcome to the twilio zone!",
+			    to: '+3107020225',
+			    from: '+4245436366',
+			  })
+			  .then(message => process.stdout.write(message.sid));
+			
+
 		    window.location.replace("http://m.memegen.com/gy6mmd.jpg");
-		  
+
+
+			
+
 			})
 	}
 })
