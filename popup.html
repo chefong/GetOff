@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head><!-- 
     <style>
       button {
         height: 50px;
@@ -8,7 +8,8 @@
         outline: none;
         margin: 10px;
       }
-    </style>
+    </style> -->
+    <link rel="stylesheet" href="popup.css">
     <title>
       Settings
     </title>
@@ -16,22 +17,26 @@
 
   <body>
     <form>
-      Set Default Timer (hh:mm):
-      <input type = "text" id = "defaultTimer">
-    </form>
-    <form>
+      Set Default Timer: <br />
+      hours:
+      <input type="number" id="Hours" min="0"><br />
+      minutes:
+      <input type="number" id="Minutes" min="0" max="59"><br />
+
         Preferred Timer Mode:
-        <input type = "radio" id = "timerMode1"
-        name = "timerMode" value = "Per Browser">
+        <input type="radio" id="timerMode1"
+        name="timerMode" value="Per Browser">
         <label for="timerMode1">Per Browser</label>
-        <input type = "radio" id = "timerMode2"
-        name = "timerMode" value = "Per Tab">
+        <input type="radio" id="timerMode2"
+        name="timerMode" value="Per Tab">
         <label for="timerMode2">Per Tab</label>
+        <button id="save" value="submit">Save</button>
 
     </form>
     <div id="status"></div>
-      <button id="save">Save Settings</button>
+   
 
+   
 
   </body>
   <script src="options.js"></script>
