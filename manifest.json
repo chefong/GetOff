@@ -6,12 +6,12 @@
   "background":{
   	"scripts": ["background.js"],
   	"persistent": false
-  }
-  // "content_scripts": [
-  // 	{
-  //     "matches": ["<all_urls>"],
-  //   //  "js": [/*"open-dialog.js",*/ "hello.js"],
-  //   //  "css": ["hello.css"]
-  // 	}
-  // ]
+  },
+  "content_scripts": [
+  	{
+      "matches": ["<all_urls>"],
+     "js": ["popup.js"]
+     
+  	}
+  ]
 }
