@@ -1,5 +1,21 @@
 #save {
-	width: 100%;
+	width: 20%;
 	height: 200%;
+	margin-top: 2%;
 }
 
+#logo {
+	height: 50%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 115%;
+	height: 100px;
+	width: 300px;
+}
+
+#Hours {
+	width: 35px;
+}
