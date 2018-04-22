@@ -10,10 +10,13 @@ chrome.runtime.onInstalled.addListener(function() {
   });
 });
 
-while(true) {
-	var userTime = setTimeout(alertUser, 1000);
-}
+var userTime = setInterval(alertUser, 5000);
+var url;
+
+chrome.tabs.query({'active': true, 'currentWindow': true}, function (tabs) {
+    url = tabs[0].url;
+});
 
 function alertUser() {
-	alert("Hello");
+	alert("You have been on " + url + " for at least 10 minutes");
 }
