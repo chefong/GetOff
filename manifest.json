@@ -8,17 +8,20 @@
     ]
   },
   "content_scripts": [
+
   	{
   		"matches": ["https://www.facebook.com/*", "https://www.reddit.com/*", "https://www.youtube.com/*"],
-  		"js": ["content.js"]
+  		"js": ["content.js", "assets/sweetalert2.min.js"],
+      "css":["assets/sweetalert2.min.css"]
   	}
   ],
   "permissions": [
-  	"tabs",
-  	"input",
-  	"http://*/*",
-  	"https://*/*",
-  	"storage"
+
+    "tabs",
+    "input",
+    "http://*/*",
+    "https://*/*",
+    "storage"
   ],
   "options_ui": {
   	"page": "options.html",
@@ -26,5 +29,6 @@
   },
   "browser_action": {
   	"default_popup": "popup.html"
+
   }
 }

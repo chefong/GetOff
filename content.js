@@ -1,7 +1,29 @@
 console.log("I'm running");
 
+
 var userHours = 0;
 var userMinutes = 0;
+
+// <<<<<<< HEAD
+// let userTimer = setInterval(alertUser, 5000);
+
+// function alertUser() {
+// swal({
+//   title: 'Hey there!',
+//   text: "You have been on " + window.location.href + " for at least 10 minutes",
+//   type: 'warning',
+//   showCancelButton: false,
+//   confirmButtonColor: '#3085d6',
+//   confirmButtonText: "I don't need a break!"
+// }).then((result) => {
+  
+//     window.location.replace("http://m.memegen.com/gy6mmd.jpg");
+  
+// })
+// 	// alert("You have been on " + siteURL + " for at least 10 minutes");
+// 	//window.location.replace("http://m.memegen.com/gy6mmd.jpg");
+// =======
+
 var userTimer;
 
 chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(result) {
@@ -24,7 +46,10 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 
 	//alert(userHours + " hours and " + userMinutes + " minutes");
 
-	userTimer = setTimeout(alertUserCustom(userHours, userMinutes), convertTime(userHours, userMinutes));
+	let time = convertTime(userHours, userMinutes);
+	// alert(time);
+	userTimer = setTimeout(alertUserCustom(userHours, userMinutes), time);
+
 })
 
 function alertUserDefault() {
@@ -38,5 +63,6 @@ function alertUserCustom(userHours, userMinutes) {
 }
 
 function convertTime(hours, minutes) {
-	return ((hours * 60) + minutes) * 60000;
+	let total = ((hours * 60) + minutes) * 60000;
+	return total;
 }
