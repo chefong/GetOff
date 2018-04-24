@@ -57,9 +57,11 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 	function alertUser(userHours, userMinutes) {
 		swal({
 		  title: 'Hey there!',
-		  text: "You have been on " + window.location.href + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minute(s)",
+		  text: "You have been on " + window.location.href + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minute(s). It's probably time for a break.",
 		  type: 'warning',
 		  showCancelButton: false,
+		  allowOutsideClick: false,
+		  allowEscapeKey: false,
 		  confirmButtonColor: '#3085d6',
 		  confirmButtonText: "I don't need a break!"
 		}).then((result) => {
