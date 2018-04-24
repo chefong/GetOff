@@ -35,10 +35,20 @@ chrome.storage.local.get(['savedDefaultHours', 'savedDefaultMinutes'], function(
 	//userTimer = setTimeout(alertUserCustom(userHours, userMinutes), time);
 	function alertUser(userHours, userMinutes) {
 		var siteName = extractName(window.location.href);
+		var message;
+		var userSeconds;
+
+		if (userMinutes < 1) {
+			userSeconds = userMinutes * 60;
+			message = "You have been on " + siteName + " for about " + userSeconds + " seconds. It's probably time for a break."
+		}
+		else {
+			message = "You have been on " + siteName + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minute(s). It's probably time for a break."
+		}
 
 		swal({
 		  title: 'Hey there!',
-		  text: "You have been on " + siteName + " for at least " + (userHours || "0") + " hour(s) and " + (userMinutes || "0") + " minute(s). It's probably time for a break.",
+		  text: message,
 		  type: 'warning',
 		  showCancelButton: false,
 		  allowOutsideClick: false,
