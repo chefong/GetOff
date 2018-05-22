@@ -1,7 +1,7 @@
-# WebTimer
+# Get Off!
 ---
 
-WebTimer is a Google Chrome extension that helps users control the amount of time spent on sites that are known for procastination. 
+Get Off! is a Google Chrome extension that helps users control the amount of time spent on sites that are known for procastination. 
 
 ## Project Contributors
 - Eric Ong
